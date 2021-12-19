@@ -111,7 +111,6 @@ public class FIcha3 {
         x.copy(p);
         System.out.println("x" + x);
 
-        //Ponto<String,Integer> erro = new Ponto<String, Integer>("erro", 5);
 
 
     }

@@ -18,7 +18,6 @@ public class FIcha4 {
         }
         it.resetIt();
         System.out.println("Maior:" + devolveMaior(dr,it));
-
     }
 
     private static <T extends DezReais,E extends ItDezReais> double devolveMaior(T dr, E it) {

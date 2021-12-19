@@ -23,7 +23,6 @@ public class ItDezReais implements Iterator<Double> {
         return posUltimo +1 < dr.size();
 
     }
-
     @Override
     public Double next() {
         return dr.get(++posUltimo);

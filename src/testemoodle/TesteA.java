@@ -41,11 +41,12 @@ public class TesteA {
         }
     }
 
+    // EX3
+
     public static void main(String[] args) {
 
         int[] tabs = {10,20,20,40,50,60,60,80,90,100};
         System.out.println(maiores(tabs,20));
-
     }
 
 

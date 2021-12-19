@@ -14,7 +14,6 @@ public class Rectangulo extends Figura {
     public double getArea() {
         return alt * lar;
     }
-
     @Override
     public String toString() {
         return "Rectangulo com area: " + getArea();

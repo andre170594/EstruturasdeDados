@@ -21,7 +21,6 @@ public class ItDezReaisMutavel implements Iterator<Double> {
             throw new ConcurrentModificationException();
     }
 
-
     @Override
     public void remove() {
         if(!podeRemover)

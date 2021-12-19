@@ -35,5 +35,4 @@ public class Ponto<X extends Number, Y extends Number>{
         setX(p.getX());
         setY(p.getY());
     }
-
 }

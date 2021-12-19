@@ -132,6 +132,5 @@ public class Ficha5 {
         spilha.showStack();
         System.out.println("\nMin:" + spilha.findMin());
 
-
     }
 }

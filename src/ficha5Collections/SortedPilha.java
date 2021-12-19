@@ -8,7 +8,6 @@ public class SortedPilha<T extends Comparable<? super T>> {
     Pilha<T> val = new Pilha<>(new ArrayList<>());  // Todos os vals
     Pilha<T> min = new Pilha<>(new ArrayList<>());  // apenas o mínimos
 
-
     public void push(T value){
         // Se a pilha dos mínimos estiver vazia ou o novo
         // valor a adicionar for mais pequeno que o último mínimo

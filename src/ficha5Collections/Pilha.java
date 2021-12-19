@@ -50,5 +50,4 @@ public class Pilha <T>{
             System.out.print("| " + li.next());
         }
     }
-
 }

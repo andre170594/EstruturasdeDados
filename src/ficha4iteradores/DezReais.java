@@ -24,7 +24,6 @@ public class DezReais  implements Iterable<Double> {
     public Iterator<Double> iterator() {
         return new ItDezReais(this);
     }
-
     @Override
     public String toString() {
         return "Class DezReais";

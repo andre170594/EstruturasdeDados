@@ -35,11 +35,9 @@ public class Fila<T> {
     }
 
     public List<? super T> getLista(){return lista;}
-
     public void MostraFila(){
         for (Object o : lista) {
             System.out.print("| " + o);
         }
     }
-
 }

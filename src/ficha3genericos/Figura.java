@@ -8,8 +8,6 @@ public class Figura implements Comparable<Figura>{
         return area;
     }
 
-
-
     @Override
     public int compareTo(Figura o) {
         return Double.compare(this.getArea(),o.getArea() );

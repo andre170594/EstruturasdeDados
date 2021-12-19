@@ -213,6 +213,5 @@ public class FIcha2 {
         System.out.println(buscaEx9NegativeBinarySearch(tabs,60));
         System.out.println(buscaEX10(tabs));
 
-
     }
 }
