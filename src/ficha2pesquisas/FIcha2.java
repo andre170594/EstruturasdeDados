@@ -184,9 +184,6 @@ public class FIcha2 {
     }
 
 
-
-
-
     public static void main(String[] args) {
 
         int[] tabs = criaArrayCom(5,10,true);
