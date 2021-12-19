@@ -215,11 +215,13 @@ public class FIcha2 {
 
     }
 
-
     public static void main(String[] args) {
 
         int[] tabs = criaArrayCom(5,10,true);
         mostraArrayInts(tabs);
+
+        int[] ex9 = {3,6,8,-10,-3,-2,-1};
+
 
         System.out.println(buscaRecursiva(tabs,10,0,tabs.length-1));
         System.out.println(buscaIterativa(tabs,15));
@@ -229,7 +231,8 @@ public class FIcha2 {
         System.out.println(buscaEX6(tabs,20,0,60));
         System.out.println(buscaEX7(tabs,20));
         System.out.println(buscaEX8(tabs,60));
-        System.out.println(buscaEx9NegativeBinarySearch(tabs,60));
+        mostraArrayInts(ex9);
+        System.out.println(buscaEx9NegativeBinarySearch(ex9,6));
         System.out.println(buscaEX10(tabs));
 
     }

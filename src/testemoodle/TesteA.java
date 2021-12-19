@@ -1,6 +1,8 @@
 package testemoodle;
 
 import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
 import java.util.ListIterator;
 
 public class TesteA {
@@ -55,9 +57,19 @@ public class TesteA {
         lista.add(val);
     }
 
-
     // EX4
+    // classes Inteiro e IterInteiro
 
+    // EX5
+    static  void limpaZeros(List<Integer> lista){
+        Iterator<Integer> it = lista.iterator();    // O(1)
+        while (it.hasNext()){                       // O(N)
+            Integer i = it.next();                  // O(1)
+            if(i==0)
+                it.remove();                        // O(N)
+        }
+        // R:  O(1) + O(N) *O(1) * O(N) = O(N^2)
+    }
 
     public static void main(String[] args) {
 

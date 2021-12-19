@@ -11,7 +11,7 @@ package ficha3genericos;
 
 public class FIcha3 {
     // ex1
-    public static <T,E extends T>  boolean  checkRepetido( T[] tabela, E chave){
+    public static <T>  boolean  checkRepetido( T[] tabela, T chave){
 
         int cnt = 0;
         for(T val : tabela){
@@ -23,27 +23,17 @@ public class FIcha3 {
         return cnt > 1;
     }
     // ex2
-    public static <T extends Comparable<T>, E extends T> boolean checkRepetidos2(T[] tabela, E chave){
-        // como ambos os genéricos são comparaveis,
-        // usando a função compareTo consigo implementar pesquisa binaria
-
-        int limInf = 0, limSup = tabela.length -1;
-        int meio = (limInf + limSup) / 2;
-
-        do{
-            if(tabela[meio].compareTo(chave) == 0)
+    public static <T extends Comparable<? super T>> boolean checkRepetidos2(T[] tabela,T chave){
+        int cnt =0;
+        for (T val : tabela) {
+            if(val.compareTo(chave) == 0)
+                cnt++;
+            if(cnt > 1)
                 return true;
-            if(tabela[meio].compareTo(chave) < 0)
-                limInf = meio + 1 ;
-            if(tabela[meio].compareTo(chave) > 0)
-                limSup = meio - 1;
-
-            meio = (limSup + limInf) / 2;
-        }while(limSup > limInf);
-
+        }
         return false;
-
     }
+
     // ex3
     public static int comparaFigs(Figura A, Figura B){
         // a Class Figura faz dá extend de Comparable por isso posso usar compTO
