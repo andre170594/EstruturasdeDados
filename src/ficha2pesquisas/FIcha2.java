@@ -49,7 +49,7 @@ public class FIcha2 {
     }
     // ***** EX 2 *****
     public static boolean buscaIterativa(int[] tabs, int chave){
-        // Time complexity: O(Log N)  Space complexity: O(N)
+        // Time complexity: O(Log N)  Space complexity: O(1)
 
         //  basicamente andar com dois index o limIf e o limSup de forma
         //  a que em cada iteracao consiga reduzir o range de procura

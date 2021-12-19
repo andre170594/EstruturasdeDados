@@ -70,15 +70,15 @@ public class FIcha3 {
         System.out.println("\nTESTES EX3");
         Rectangulo retA = new Rectangulo(5,6);
         Rectangulo retB = new Rectangulo(3,4);
-        Figura fig = new Figura();
+
 
         System.out.println(retA);
         System.out.println(retB);
         System.out.println("A == B ?: " +  comparaFigs(retA,retB));
-        System.out.println("A == B ?: " +  comparaFigs(retA,fig));
+
         // ex3B
         System.out.println("A == B ?: " +  comparaRecObj(retA,retB));
-        System.out.println("A == B ?: " +  comparaRecObj(retA,fig));
+
 
 
         // testes ex4

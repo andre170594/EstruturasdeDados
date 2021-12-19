@@ -1,6 +1,6 @@
 package ficha3genericos;
 
-public class Figura implements Comparable<Figura>{
+public abstract class Figura implements Comparable<Figura>{
 
     private double area;
 
