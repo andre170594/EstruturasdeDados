@@ -34,8 +34,7 @@ public class FIcha2 {
 
     // ***** EX 1 *****
     public static boolean buscaRecursiva(int[] tabela, int chave, int limInf, int limSup){
-
-
+        // Time complexity: O(Log N)  Space complexity: O(Log N)
         int meio= (limSup + limInf) / 2;
         if(tabela[limInf] == chave || tabela[limSup] == chave ||  tabela[meio] == chave     || limInf > limSup){
             return limInf <= limSup;
@@ -50,6 +49,19 @@ public class FIcha2 {
     }
     // ***** EX 2 *****
     public static boolean buscaIterativa(int[] tabs, int chave){
+        // Time complexity: O(Log N)  Space complexity: O(N)
+
+        //  basicamente andar com dois index o limIf e o limSup de forma
+        //  a que em cada iteracao consiga reduzir o range de procura
+        //  até chegar ao valor pretendido.
+        //  a cada iteracao vai procurar na posicao que fica no meio desse
+        //  range em que o meio é igual (lim sup - limInf) /2;
+        //  se encontrar o meio devolve, caso contrário atualiza o range de procura
+        //  diminuindo cada vez mais até que em último caso os indexes de limite se encontram.
+        //  Nesse caso ou esse valor é o que pretendemos encontrar ou entao temos
+        //  a garantia que ele não existe.
+
+
         int limInf = 0;
         int limSup = tabs.length-1;
         int meio = (limSup + limInf)/2;
@@ -86,6 +98,7 @@ public class FIcha2 {
     }
     // ***** EX4 *****
     public static int buscaBinIterEX4(int[] tabs, int chave){
+        // Esta pesquisa é de complexidade logaritmica
         int limInf= 0, limSup = tabs.length -1;
         int meio = (limSup + limInf) /2;
 
