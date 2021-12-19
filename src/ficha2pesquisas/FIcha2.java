@@ -93,8 +93,13 @@ public class FIcha2 {
 
         //     ITER 3     CHAVE: 7
         //      | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 |
-        //                            ^   ^                             tabs[meio] = valor
-        //                        limIf   limSup e meio                 ou limIf > limSup e entao nao encontrou o valor
+        //                            ^   ^                              tabs[meio] < valor
+        //                   limIf e meio  limSup                        ent atualiza lim Inferior
+
+        //     ITER 4     CHAVE: 7
+        //      | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 |               no meio tem  valor 7
+        //                                ^                              tabs[meio] == valor
+        //                         limIf e meio e limSup                 ent encontrou o valor
 
         int limInf = 0, limSup = tabs.length-1;
         int meio = (limSup+limInf)/2;
