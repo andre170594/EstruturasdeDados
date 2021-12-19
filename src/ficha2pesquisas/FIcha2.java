@@ -79,6 +79,23 @@ public class FIcha2 {
    }
     // ***** EX 3 *****
     public static int buscaEx3(int[] tabs, int chave){
+        // mesma coisa que a de cima mas agora retorna a pos do valor ou -1 caso não encontre
+
+        //     ITER 1     CHAVE: 7
+        //      | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 |               no meio tem  valor 5
+        //        ^               ^                   ^                  tabs[meio] < valor
+        //      limIf           meio                limSup               ent atualiza lim inferior
+
+        //     ITER 2     CHAVE: 7
+        //      | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 |               no meio tem  valor 8
+        //                            ^       ^       ^                  tabs[meio] > valor
+        //                         limIf    meio    limSup               ent atualiza lim superior
+
+        //     ITER 3     CHAVE: 7
+        //      | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 |
+        //                            ^   ^                             tabs[meio] = valor
+        //                        limIf   limSup e meio                 ou limIf > limSup e entao nao encontrou o valor
+
         int limInf = 0, limSup = tabs.length-1;
         int meio = (limSup+limInf)/2;
 
@@ -99,6 +116,8 @@ public class FIcha2 {
     // ***** EX4 *****
     public static int buscaBinIterEX4(int[] tabs, int chave){
         // Esta pesquisa é de complexidade logaritmica
+        // mesma coisa mas agora caso nao encontre o valor indica a pos onde ele devia ser inserido
+        // de forma a perservar a ordenação
         int limInf= 0, limSup = tabs.length -1;
         int meio = (limSup + limInf) /2;
 
