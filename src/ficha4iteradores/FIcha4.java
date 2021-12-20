@@ -1,5 +1,8 @@
 package ficha4iteradores;
 
+import java.util.Iterator;
+import java.util.List;
+
 public class FIcha4 {
     public static void main(String[] args) {
         System.out.println("ficha4");
@@ -12,17 +15,31 @@ public class FIcha4 {
         dr.add(7.2);
         dr.add(0.2);
 
-        ItDezReais it = new ItDezReais(dr);
+        ItDezReais it = (ItDezReais) dr.iterator();
+
         while (it.hasNext()){
             System.out.println(it.next());
         }
         it.resetIt();
-        System.out.println("Maior:" + devolveMaior(dr,it));
+        System.out.println("Maior:" + devolveMaior(dr));
+
+        DezReaisMutavel drm = new DezReaisMutavel();
+        drm.acrescenta(1.1);
+        drm.acrescenta(2.1);
+        drm.acrescenta(3.1);
+        drm.acrescenta(4.1);
+        drm.acrescenta(10.1);
+        drm.acrescenta(6.1);
+
+        System.out.println("Maior:" + devolveMaior(drm));
+
     }
 
-    private static <T extends DezReais,E extends ItDezReais> double devolveMaior(T dr, E it) {
-        double maior = dr.get(0);
-        double tmp;
+    public static Double devolveMaior(Iterable<Double> dr){
+        Iterator<Double> it = dr.iterator();
+        Double maior,tmp;
+        maior = it.next();
+
         while (it.hasNext()){
             tmp = it.next();
             if(tmp > maior)

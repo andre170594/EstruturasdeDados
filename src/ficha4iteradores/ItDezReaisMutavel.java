@@ -40,7 +40,7 @@ public class ItDezReaisMutavel implements Iterator<Double> {
     @Override
     public Double next() {
         verificaMods();
-        if(posUltimo +1 < drm.size())
+        if(posUltimo +1 >= drm.size())
             throw new NoSuchElementException();
         podeRemover = true;
         return drm.get(++posUltimo);
