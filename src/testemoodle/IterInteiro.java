@@ -1,7 +1,6 @@
 package testemoodle;
 
 import java.util.Iterator;
-import java.util.List;
 import java.util.NoSuchElementException;
 
 public class IterInteiro implements Iterator<Integer> {
@@ -13,16 +12,18 @@ public class IterInteiro implements Iterator<Integer> {
         this.inteiro = inteiro;
     }
 
-
-
-
     @Override
     public boolean hasNext() {
-        return false;
+        return !usado;
     }
 
     @Override
     public Integer next() {
-        throw new NoSuchElementException();
+        if (usado)
+            throw new NoSuchElementException();
+        else{
+            usado = true;
+            return inteiro.valor;
+        }
     }
 }
