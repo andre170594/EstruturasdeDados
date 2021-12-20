@@ -1,5 +1,6 @@
 package ficha4iteradores;
 
+import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
@@ -33,6 +34,13 @@ public class FIcha4 {
 
         System.out.println("Maior:" + devolveMaior(drm));
 
+        ArrayList<Double> tabs = new ArrayList<>();
+        tabs.add(2.2);
+        tabs.add(5.2);
+        tabs.add(3.2);
+        tabs.add(1.2);
+        tabs.add(7.2);
+        System.out.println("Maior:" + devolveMaior(tabs));
     }
 
     public static Double devolveMaior(Iterable<Double> dr){
