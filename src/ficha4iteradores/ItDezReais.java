@@ -18,13 +18,13 @@ public class ItDezReais implements Iterator<Double> {
 
     @Override
     public boolean hasNext() {
-        if(posUltimo + 1 > dr.size())
-            throw new NoSuchElementException();
         return posUltimo +1 < dr.size();
 
     }
     @Override
     public Double next() {
+        if(posUltimo + 1 > dr.size())
+            throw new NoSuchElementException();
         return dr.get(++posUltimo);
     }
 }
