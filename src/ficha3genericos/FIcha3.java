@@ -46,7 +46,7 @@ public class FIcha3 {
         return obj2.compareTo(obj);
     }
     // ex4
-    public static <T extends Comparable<T>, E extends T> boolean searchMaior(T[] tab, E val){
+    public static <T extends Comparable<? super T>> boolean searchMaior(T[] tab, T val){
         for(T t : tab){
             if(t.compareTo(val) > 0 )
                 return true;

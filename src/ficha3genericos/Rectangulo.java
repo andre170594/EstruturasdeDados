@@ -5,7 +5,7 @@ public class Rectangulo extends Figura {
     private double alt;
     private double lar;
 
-    public Rectangulo(int alt, int lar){
+    public Rectangulo(double alt, double lar){
         this.alt = alt;
         this.lar = lar;
     }
