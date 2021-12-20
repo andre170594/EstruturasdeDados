@@ -61,7 +61,6 @@ public class FIcha2 {
         //  Nesse caso ou esse valor é o que pretendemos encontrar ou entao temos
         //  a garantia que ele não existe.
 
-
         int limInf = 0;
         int limSup = tabs.length-1;
         int meio = (limSup + limInf)/2;

@@ -12,7 +12,6 @@ package ficha3genericos;
 public class FIcha3 {
     // ex1
     public static <T>  boolean  checkRepetido( T[] tabela, T chave){
-
         int cnt = 0;
         for(T val : tabela){
             if(val == chave)
