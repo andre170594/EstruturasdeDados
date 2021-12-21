@@ -21,7 +21,7 @@ public class ItDezReaisMutavel implements Iterator<Double> {
             throw new ConcurrentModificationException();
     }
 
-    @Override
+
     public void remove() {
         if(!podeRemover)
             throw new IllegalStateException();
@@ -29,6 +29,12 @@ public class ItDezReaisMutavel implements Iterator<Double> {
         System.out.println("removendo: " + drm.get(posUltimo));
         drm.remove(posUltimo);
         posUltimo--;
+        modsknown++;
+    }
+
+    public void acrescenta(Double valor){
+        verificaMods();
+        drm.acrescenta(valor);
         modsknown++;
     }
 

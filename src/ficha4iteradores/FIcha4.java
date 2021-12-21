@@ -50,10 +50,11 @@ public class FIcha4 {
         ItDezReais it = (ItDezReais) dr.iterator();
 
         while (it.hasNext()){
-            System.out.println(it.next());
+            System.out.print(" | " +it.next());
         }
         it.resetIt();
-        System.out.println("Maior:" + devolveMaior(dr));
+        System.out.print("\nMaior:" + devolveMaior(dr));
+        System.out.println();
 
         DezReaisMutavel drm = new DezReaisMutavel();
         drm.acrescenta(1.1);
@@ -63,7 +64,19 @@ public class FIcha4 {
         drm.acrescenta(10.1);
         drm.acrescenta(6.1);
 
-        System.out.println("Maior:" + devolveMaior(drm));
+        ItDezReaisMutavel itm = (ItDezReaisMutavel) drm.iterator();
+        int i = 0;
+        while (itm.hasNext() && i < 3){
+            System.out.print(" | " + itm.next());
+            i++;
+        }
+        itm.acrescenta(3.3);
+
+        while (itm.hasNext()){
+            System.out.print(" | " + itm.next());
+        }
+
+        System.out.println("\nMaior:" + devolveMaior(drm));
 
         ArrayList<Double> tabs = new ArrayList<>();
         tabs.add(2.2);
