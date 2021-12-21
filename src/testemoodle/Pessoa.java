@@ -2,7 +2,7 @@ package testemoodle;
 
 import java.util.Iterator;
 
-public class Pessoa implements Iterable<Pessoa>{
+public class Pessoa implements Iterable<String>{
 
     private final String nome;
     private final String morada;
@@ -22,7 +22,7 @@ public class Pessoa implements Iterable<Pessoa>{
 
 
     @Override
-    public Iterator<Pessoa> iterator() {
+    public Iterator<String> iterator() {
         return new IterPessoas(this);
     }
 }

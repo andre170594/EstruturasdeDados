@@ -54,7 +54,7 @@ public class TesteB {
     }
 
     // EX3
-    public static <T extends Comparable<? super T>> void f(ArrayList<T> lista,T valor){
+    public static <T> void f(ArrayList<Comparable<? super T>> lista,T valor){
         lista.removeIf(val -> val.compareTo(valor) < 0);
     }
 
@@ -69,8 +69,8 @@ public class TesteB {
         Pessoa p = new Pessoa("Jaffar Akbar","Rua das Bombas");
         IterPessoas itp = (IterPessoas) p.iterator();
         while (itp.hasNext()){
-            Pessoa tmp = itp.next();
-            System.out.println("Nome: " + tmp.getNome() + "\nMorada: " + tmp.getMorada());
+            System.out.println("Nome: " + itp.next());
+            System.out.println("Morada: " + itp.next());
         }
 
 

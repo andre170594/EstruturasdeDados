@@ -3,10 +3,10 @@ package testemoodle;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 
-public class IterPessoas implements Iterator<Pessoa> {
+public class IterPessoas implements Iterator<String> {
 
     Pessoa p;
-    boolean visto = false;
+    int cnt = 0;
 
     public IterPessoas(Pessoa p) { this.p = p; }
 
@@ -17,16 +17,23 @@ public class IterPessoas implements Iterator<Pessoa> {
 
     @Override
     public boolean hasNext() {
-        return !visto;
+        return cnt < 2;
     }
 
     @Override
-    public Pessoa next() {
-        if(visto)
+    public String next() {
+
+        if(cnt >= 2)
             throw new NoSuchElementException();
+
+        if(cnt == 0){
+            cnt++;
+            return p.getNome();
+
+        }
         else{
-            visto = true;
-            return p;
+            cnt++;
+            return p.getMorada();
         }
 
     }
