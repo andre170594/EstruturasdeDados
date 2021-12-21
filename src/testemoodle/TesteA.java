@@ -86,6 +86,11 @@ public class TesteA {
         f(10.0,list);
         mostraList(list);
 
+        Inteiro inteiro = new Inteiro(5);
+        IterInteiro itr = (IterInteiro) inteiro.iterator();
+        while (itr.hasNext())
+            System.out.println("Inteiro: " + itr.next());
+
 
     }
 
