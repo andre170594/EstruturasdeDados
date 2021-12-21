@@ -1,6 +1,7 @@
 package testemoodle;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.ListIterator;
 
 public class TesteB {
@@ -54,7 +55,7 @@ public class TesteB {
     }
 
     // EX3
-    public static <T> void f(ArrayList<Comparable<? super T>> lista,T valor){
+    public static <T extends Comparable<? super T>> void f(ArrayList<T> lista,T valor){
         lista.removeIf(val -> val.compareTo(valor) < 0);
     }
 
@@ -74,6 +75,16 @@ public class TesteB {
         }
 
 
+        ArrayList<Integer> lista = new ArrayList<>();
+        lista.add(5);
+        lista.add(20);
+        lista.add(30);
+        lista.add(10);
+        f(lista,15);
+
+        Iterator<Integer> it = lista.iterator();
+        while (it.hasNext())
+            System.out.print(" | " + it.next());
 
     }
 }

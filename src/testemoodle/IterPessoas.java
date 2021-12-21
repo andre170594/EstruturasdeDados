@@ -29,7 +29,6 @@ public class IterPessoas implements Iterator<String> {
         if(cnt == 0){
             cnt++;
             return p.getNome();
-
         }
         else{
             cnt++;
