@@ -81,10 +81,21 @@ public class TesteB {
         lista.add(30);
         lista.add(10);
         f(lista,15);
+        for (Integer integer : lista) System.out.print(" | " + integer);
 
-        Iterator<Integer> it = lista.iterator();
-        while (it.hasNext())
-            System.out.print(" | " + it.next());
+        ArrayList<String> nomes = new ArrayList<>();
+        nomes.add("Jaffar");
+        nomes.add("Akbar");
+        nomes.add("Imotep");
+        nomes.add("Renas");
+        nomes.add("oi");
+        nomes.add("estrutura");
+        nomes.add("dados");
+
+        System.out.println();
+
+        f(nomes,"aaaaa");
+        for(String str : nomes) System.out.print(" | " + str);
 
     }
 }

@@ -36,14 +36,24 @@ public class TesteA {
     }
     public static int maiores(int[] m, int valor){
         int pos = pesquisa(m,valor);        // O( Log N)
-        if(pos > 0){
-            if(m[pos + 1] != m[pos])
-                return m.length - pos -1;
+        if(pos < 0)
+            pos = -pos-2;
+
+        if(pos == m.length -1 )
+            return valor;
+
+        if(pos == m.length -2){
+            if(m[pos] != m[pos +1])
+                return m[pos +1];
             else
-                return m.length - pos - 2;
-        }else {
-            return m.length -(-pos -1);
+                return valor;
         }
+
+        if(m[pos] != m[pos+1])
+            return m[pos +1];
+        else
+            return m[pos +2];
+
     }
 
     // EX3
@@ -74,7 +84,7 @@ public class TesteA {
     public static void main(String[] args) {
 
         int[] tabs = {10,20,20,40,50,60,60,80,90,100};
-        System.out.println(maiores(tabs,20));
+        System.out.println(maiores(tabs,100));
 
         ArrayList<Double> list = new ArrayList<>();
         list.add(1.0);
