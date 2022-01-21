@@ -31,6 +31,7 @@ public class FIcha6 {
         gestor.getPrinter("imp 2").imprimeTrab();
         gestor.getPrinter("imp 3").imprimeTrab();
 
+        System.out.println("\nDepois de mandar imprimir");
         gestor.mostraFila();
 
 
