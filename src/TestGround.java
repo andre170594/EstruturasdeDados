@@ -1,21 +1,22 @@
+import TestZone.ListaLigada;
+
+
+
 
 
 public class TestGround {
 
-    public static void mostraLista(int[]  lista){
-        for (int val: lista) {
-            System.out.print(" | " + val);
-        }
-        System.out.println();
-    }
-
-
     public static void main(String[] args) {
-
-        int[] tabs = {10,20,20,40,50,60,60,80,90,100};
-        mostraLista(tabs);
-
+        ListaLigada<Integer> lista = new ListaLigada<>();
+        lista.addFinal(0);
+        lista.addFinal(1);
+        lista.addFinal(2);
+        lista.addFinal(3);
+        lista.addFinal(4);
+        lista.PrintLista("add final");
+        System.out.println("get: " + lista.getAtIndex(2).getData());
 
 
     }
+
 }
